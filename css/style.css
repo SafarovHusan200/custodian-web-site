@@ -1,0 +1,77 @@
+/* import font family: Montserrat and roboto */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.container {
+  width: 1134px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 209px;
+  height: 49px;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.navbar_item {
+  font-weight: 600;
+  font-size: 16px;
+  color: #333333;
+  text-decoration: none;
+}
+
+.btn {
+  width: 208px;
+  height: 50px;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19.5px;
+  word-spacing: 1px;
+  cursor: pointer;
+}
+
+.header_btn .btn {
+  background-color: #42577f;
+}
+
+/* Hero */
+.hero {
+  width: 100%;
+  margin: 0 auto;
+  height: 818px;
+  background-image: url(../public/banner_img.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
