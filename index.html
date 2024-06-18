@@ -21,7 +21,7 @@
           <a class="navbar_item" href="#">Свяжитесь с нами</a>
         </div>
         <div class="header_btn">
-          <button class="btn">Узнать подробнее</button>
+          <button class="btn" id="open_modal">Узнать подробнее</button>
         </div>
       </div>
     </header>
@@ -39,7 +39,7 @@
               налогоплательщиков. Любые фри-зоны, мейнленд. 
             </p>
             <div class="hero_right_btn">
-              <button class="btn">Узнать стоимость</button>
+              <button class="btn" id="open_modal">Узнать стоимость</button>
             </div>
           </div>
         </div>
@@ -78,7 +78,7 @@
       <div class="container">
         <div class="services_title">
           <h1 class="add_point">Предоставляемые услуги</h1>
-          <button class="btn">Узнать подробнее</button>
+          <button class="btn" id="open_modal">Узнать подробнее</button>
         </div>
 
         <div class="service">
@@ -462,6 +462,66 @@
           <div>Разработка сайта - <span>EDISON STUDIO</span></div>
         </div>
       </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal_back hide" id="modal_back">
+      <div class="modal_close" id="modal_close">
+        <span></span>
+        <span></span>
+      </div>
+      <form class="contact_us_form">
+        <div class="contact_us_form_top">
+          <h3 class="add_point">Свяжись с нами</h3>
+          <img src="./public/icons/little_white_icon.png" alt="icon" />
+        </div>
+
+        <div class="contact_us_form_row">
+          <input
+            class="contact_us_form_input"
+            type="text"
+            placeholder="Ваше имя * "
+          />
+          <img src="./public/icons/free-icon-user-avatar.png" alt="" />
+        </div>
+
+        <div class="contact_us_form_row">
+          <input
+            class="contact_us_form_input"
+            type="text"
+            placeholder="Телефон * "
+          />
+          <img src="./public/icons/call.png" alt="" />
+        </div>
+        <div class="contact_us_form_row">
+          <input
+            class="contact_us_form_input"
+            type="text"
+            placeholder="E-mail * "
+          />
+          <img src="./public/icons/free-icon-email.png" alt="" />
+        </div>
+        <div class="contact_us_form_row textarea">
+          <textarea
+            placeholder="Ваш вопрос *"
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+          ></textarea>
+          <img src="./public/icons/free-icon-question.png" alt="" />
+        </div>
+
+        <div class="contact_us_form_checked">
+          <input class="" type="checkbox" id="form_checked" />
+          <label for="form_checked"
+            >Нажимая на кнопку, Вы соглашаетесь с Политикой
+            конфиденциальности</label
+          >
+        </div>
+
+        <button class="form_submit">Отправить</button>
+      </form>
     </div>
 
     <script src="./js/script.js"></script>
