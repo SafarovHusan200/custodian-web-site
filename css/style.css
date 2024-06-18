@@ -12,6 +12,18 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: 0 0 5px gray;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #42577f;
+  border-radius: 10px;
+}
+
 /* Header */
 .header {
   width: 100%;
@@ -20,6 +32,7 @@ html {
   z-index: 6;
   top: 0;
   background-color: white;
+  box-shadow: 0 0 5px gray;
 }
 
 .container {
@@ -882,4 +895,39 @@ html {
 }
 .modal_close span:last-child {
   transform: rotate(135deg) translate(-5px, 6px);
+}
+
+/* Scroll */
+
+.scroll-top-arrow,
+.scroll-top-arrow:focus {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 25%;
+  background-color: #2196f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: -10px;
+  bottom: 10px;
+  transition: all 0.4s ease;
+  opacity: 0;
+  border: none;
+  outline: none;
+
+  z-index: 8;
+}
+.scroll-top-arrow:hover {
+  cursor: pointer;
+}
+.scroll-top-arrow img {
+  width: 80%;
+}
+.scroll-top-arrow.active {
+  transition: all 0.5s;
+  bottom: 10px;
+  right: 10px;
+  opacity: 1;
 }
