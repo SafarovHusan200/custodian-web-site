@@ -16,6 +16,10 @@ html {
 .header {
   width: 100%;
   padding: 16px 0;
+  position: fixed;
+  z-index: 6;
+  top: 0;
+  background-color: white;
 }
 
 .container {
@@ -80,6 +84,7 @@ html {
   background-position: top;
   background-repeat: no-repeat;
   background-size: contain;
+  margin-top: 83px;
 }
 
 .hero .container {
@@ -840,6 +845,7 @@ html {
   height: 100vh;
   background-color: rgba(128, 128, 128, 0.724);
   position: fixed;
+  z-index: 10;
   top: 0;
   left: 0;
 
@@ -861,7 +867,6 @@ html {
   right: 10px;
   top: 10px;
   cursor: pointer;
-  z-index: 6;
 }
 
 .modal_close span {
