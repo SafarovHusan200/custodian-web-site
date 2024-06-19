@@ -84,19 +84,32 @@ html {
   align-items: center;
 }
 
+.header_btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .header_btn .btn {
   background-color: #42577f;
+}
+
+.menu_btn {
+  border: none;
+  cursor: pointer;
+  display: none;
 }
 
 /* Hero */
 .hero {
   max-width: 1920px;
   height: 818px;
+  /* height: 752px; */
   margin: 0 auto;
   background-image: url("../public/hero_banner.png");
   background-position: top;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   margin-top: 83px;
 }
 
@@ -158,7 +171,6 @@ html {
   border-radius: 15px;
 
   overflow: hidden;
-
   margin-top: 110px;
 }
 
@@ -241,6 +253,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: start;
+  gap: 35px;
 }
 
 .service_left,
@@ -249,7 +262,7 @@ html {
 }
 
 .service_card {
-  width: 552px;
+  max-width: 552px;
   height: 161px;
   background-color: #f8f8f8;
   border-radius: 20px;
@@ -288,12 +301,15 @@ html {
 .service_right {
   height: 655px;
   margin-top: 6px;
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+}
 
-  background: url("../public/servic_pic.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-clip: content-box;
+.service_right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .service_btns {
@@ -301,8 +317,10 @@ html {
   justify-content: start;
   align-items: center;
   gap: 6px;
-  margin-top: 19px;
-  margin-left: 23px;
+
+  position: absolute;
+  top: 18px;
+  left: 18px;
 }
 
 .service_btn {
@@ -362,35 +380,30 @@ html {
 }
 
 .goup_cards {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-top: 45px;
+  margin-top: 47px;
   gap: 30px;
 }
 
 .group_card-left,
 .group_card-right {
-  width: 552px;
-  height: 583px;
+  max-width: 552px;
+  max-height: 583px;
 }
 
-.group_card-img:first-child {
-  width: 548px;
-  height: 365px;
-  background: url("../public/group_img1.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.group_card-img {
+  max-width: 548px;
+  max-height: 365px;
+
+  position: relative;
 }
 
-.group_card-right .group_card-img {
-  width: 548px;
-  height: 365px;
-  background: url("../public/group_img2.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.group_card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .goup_cards .expirence {
@@ -403,12 +416,13 @@ html {
   font-weight: 600;
   font-size: 14px;
 
-  margin-top: 20px;
-  margin-left: 20px;
+  position: absolute;
+  top: 18px;
+  left: 20px;
 }
 
 .group_card_content {
-  padding: 22px 21px;
+  padding: 19px 21px;
 }
 
 .group_card_content-name {
@@ -462,7 +476,7 @@ html {
 }
 
 .company_lorem {
-  margin-top: 51px;
+  margin-top: 50px;
   font-family: "Montserrat", sans-serif;
   line-height: 21.94px;
   font-size: 18px;
@@ -528,6 +542,7 @@ html {
 
 .partner_title {
   display: inline-block;
+  font-size: 35px;
 }
 
 .partner_change {
@@ -542,16 +557,17 @@ html {
 }
 
 .partner_main {
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   gap: 2px;
-  margin-top: 50px;
+  margin-top: 58px;
 }
 
 .partner_item {
-  width: 282px;
-  height: 290px;
+  max-width: 282px;
+  min-height: 290px;
   padding: 25px 20px;
   border-radius: 10px;
   background-color: #f8f8f8;
@@ -559,8 +575,8 @@ html {
 
 .partner_item_img {
   margin: 0 auto;
-  width: 242px;
-  height: 113px;
+  max-width: 242px;
+  max-height: 113px;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -572,7 +588,7 @@ html {
   font-size: 18px;
   font-weight: 600;
   color: #333333;
-  margin-top: 16px;
+  margin-top: 19px;
 }
 
 .partner_item_stars {
@@ -590,8 +606,7 @@ html {
 /* ===== Contact ===== */
 .contact {
   width: 100%;
-  height: auto;
-  margin-top: 120px;
+  margin-top: 106px;
   padding-bottom: 245px;
   border-radius: 0 0 60px 60px;
   position: relative;
@@ -669,6 +684,10 @@ html {
   position: relative;
 }
 
+.contact_map_img {
+  width: 100%;
+}
+
 .contact_map_location {
   position: absolute;
   top: 50%;
@@ -720,14 +739,18 @@ html {
   background-color: #333333;
   position: relative;
   z-index: 2;
-  margin-top: 7px;
+  margin-top: 5px;
+}
+
+.contact_us_form .add_point::after {
+  background-color: #f2f2f2;
 }
 
 .contact_us_form_top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 42px;
+  margin-bottom: 40px;
 }
 
 .contact_us_form_top h3 {
@@ -788,8 +811,6 @@ html {
 }
 
 .form_submit {
-  /* display: inline-block; */
-
   height: 50px;
   border-radius: 30px;
   background: none;
@@ -806,7 +827,17 @@ html {
   font-size: 16px;
 }
 
+.contact_us_right {
+  width: 65%;
+}
+
+.contact_us_right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .contact_us_people {
+  width: 100%;
   position: relative;
   z-index: 3;
 }
@@ -814,7 +845,9 @@ html {
 /* ===== Footer ===== */
 .footer {
   width: 100%;
-  margin-top: 47px;
+  padding-top: 47px;
+  margin-top: -34px;
+  border-radius: 30px 30px 0px 0px;
 }
 
 .footer .container {
@@ -828,10 +861,13 @@ html {
   align-items: center;
 }
 
-.footer .navbar {
-  margin-left: -4px;
+.footer_left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
-
 .footer_social_icons {
   display: flex;
   gap: 16px;
@@ -874,7 +910,6 @@ html {
 .modal_close {
   width: 50px;
   height: 50px;
-  /* border: 1px solid; */
 
   position: absolute;
   right: 10px;
@@ -930,4 +965,251 @@ html {
   bottom: 10px;
   right: 10px;
   opacity: 1;
+}
+
+/* Menu */
+.menu {
+  width: 239px;
+  height: 100vh;
+  padding: 30px;
+  border-radius: 0px, 0px, 0px, 15px;
+  background: #f8f8f8;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  position: fixed;
+  top: 0;
+  right: -239px;
+  z-index: 55;
+  transition: 0.3s;
+}
+
+.menu_row_close {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menu_row_logo {
+  margin-top: 20px;
+}
+
+.active_menu {
+  right: 0;
+}
+
+.menu_navbar {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+  margin-top: 48px;
+}
+.menu_nav_item {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  color: #333333;
+}
+
+@media only screen and (max-width: 1134px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
+@media only screen and (max-width: 1045px) {
+  .container {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .menu_btn {
+    display: block;
+  }
+
+  .header_btn {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .hero {
+    background: url("../public/hero_1024.png");
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+  .hero_center_right {
+    width: 50%;
+  }
+
+  .services {
+    padding-top: 153px;
+  }
+
+  .services_title h1 {
+    font-size: 30px;
+    width: 431px;
+  }
+
+  .service {
+    margin-top: 26px;
+  }
+
+  .group {
+    margin-top: 87px;
+  }
+
+  .group .container {
+    align-items: start;
+  }
+
+  .group_title {
+    font-size: 30px;
+  }
+
+  .goup_cards {
+    margin-top: 25px;
+    gap: 30px;
+  }
+
+  .group_card-img {
+    max-width: 548px;
+    height: 321px !important;
+  }
+
+  .group_card_content {
+    padding: 16px 15px;
+  }
+
+  .company {
+    max-height: 680px;
+    background-position: center;
+  }
+
+  .company_title {
+    margin-top: 70px;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .company_lorem {
+    margin-top: 30px;
+  }
+
+  .partner {
+    margin-top: 88px;
+  }
+  .partner_title {
+    font-size: 30px;
+  }
+
+  .partner_main {
+    width: 100%;
+
+    gap: 2px;
+    margin-top: 28px;
+  }
+  .partner_item {
+    width: 25%;
+  }
+
+  .partner_item_title {
+    margin-top: 14px;
+  }
+
+  .partner_item_img img {
+    object-fit: cover;
+  }
+
+  .contact {
+    margin-top: 71px;
+    padding-bottom: 255px;
+
+    margin-top: 106px;
+  }
+
+  .contact_title {
+    font-size: 30px;
+  }
+
+  .contact_main_item {
+    width: 320px;
+    height: 132px;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    padding: 20px 0px 0 20px;
+
+    display: flex;
+    gap: 13px;
+  }
+
+  .contact_main {
+    right: 20px;
+  }
+
+  .contact_us {
+    width: 100%;
+    height: 718px;
+
+    margin-top: -128px;
+  }
+
+  .contact_us_form {
+    width: 486px;
+    height: 580px;
+    padding: 30px 50px 30px 30px;
+
+    margin-top: 57px;
+  }
+
+  .contact_us_form_top {
+    margin-bottom: 30px;
+  }
+
+  .contact_us_form_top h3 {
+    font-size: 30px;
+  }
+
+  .contact_us_form_checked {
+    margin-top: 30px;
+  }
+
+  .footer {
+    padding-top: 51px;
+    margin-top: -34px;
+  }
+
+  .footer_row {
+    align-items: end;
+  }
+  .footer_left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer_navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    margin-top: 27px;
+  }
+  .footer_nav_item {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    color: #333333;
+  }
+
+  .hr {
+    margin-top: 30px;
+  }
 }

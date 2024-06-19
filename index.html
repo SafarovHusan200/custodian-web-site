@@ -22,6 +22,9 @@
         </div>
         <div class="header_btn">
           <button class="btn" id="open_modal">Узнать подробнее</button>
+          <button class="menu_btn" id="open_menu">
+            <img src="./public/icons/menu_icon.png" alt="" />
+          </button>
         </div>
       </div>
     </header>
@@ -121,6 +124,7 @@
             </div>
           </div>
           <div class="service_right">
+            <img src="./public/servic_pic.png" alt="" />
             <div class="service_btns">
               <button class="service_btn">Надежно</button>
               <button class="service_btn">Качественно</button>
@@ -138,6 +142,7 @@
         <div class="goup_cards">
           <div class="group_card-left">
             <div class="group_card-img">
+              <img src="./public/group_img1.png" alt="group" />
               <div class="expirence">10-летний опыт</div>
             </div>
             <div class="group_card_content">
@@ -157,6 +162,7 @@
           </div>
           <div class="group_card-right">
             <div class="group_card-img">
+              <img src="./public/group_img2.png" alt="group" />
               <div class="expirence">10 years of experience</div>
             </div>
             <div class="group_card_content">
@@ -367,7 +373,7 @@
               <img class="" src="./public/icons/little-logo.png" alt="" />
             </div>
           </div>
-          <img src="./public/map.png" alt="" />
+          <img class="contact_map_img" src="./public/map.png" alt="" />
         </div>
       </div>
     </div>
@@ -375,7 +381,7 @@
     <!-- Contact us -->
     <div class="contact_us" id="contact_us">
       <div class="container">
-        <form class="contact_us_form">
+        <form class="contact_us_form" id="form">
           <div class="contact_us_form_top">
             <h3 class="add_point">Свяжись с нами</h3>
             <img src="./public/icons/little_white_icon.png" alt="icon" />
@@ -383,6 +389,7 @@
 
           <div class="contact_us_form_row">
             <input
+              name="name"
               class="contact_us_form_input"
               type="text"
               placeholder="Ваше имя * "
@@ -392,6 +399,7 @@
 
           <div class="contact_us_form_row">
             <input
+              name="phone"
               class="contact_us_form_input"
               type="text"
               placeholder="Телефон * "
@@ -400,6 +408,7 @@
           </div>
           <div class="contact_us_form_row">
             <input
+              name="email"
               class="contact_us_form_input"
               type="text"
               placeholder="E-mail * "
@@ -408,6 +417,7 @@
           </div>
           <div class="contact_us_form_row textarea">
             <textarea
+              name="message"
               placeholder="Ваш вопрос *"
               name=""
               id=""
@@ -428,7 +438,9 @@
           <button class="form_submit">Отправить</button>
         </form>
 
-        <img class="contact_us_people" src="./public/pic_people.png" alt="" />
+        <div class="contact_us_right">
+          <img class="contact_us_people" src="./public/pic_people.png" alt="" />
+        </div>
       </div>
     </div>
 
@@ -436,22 +448,32 @@
     <div class="footer" id="footer">
       <div class="container">
         <div class="footer_row">
-          <div class="footer_logo">
-            <img src="./public/footer_icon.png" alt="logo" />
-          </div>
-          <div class="navbar">
-            <a class="navbar_item" href="#">Услуги</a>
-            <a class="navbar_item" href="#">Наша команда</a>
-            <a class="navbar_item" href="#">О нас</a>
-            <a class="navbar_item" href="#">Контакты</a>
-            <a class="navbar_item" href="#">Свяжитесь с нами</a>
+          <div class="footer_left">
+            <div class="footer_logo">
+              <img src="./public/footer_icon.png" alt="logo" />
+            </div>
+            <div class="footer_navbar">
+              <a class="footer_nav_item" href="#">Услуги</a>
+              <a class="footer_nav_item" href="#">Наша команда</a>
+              <a class="footer_nav_item" href="#">О нас</a>
+              <a class="footer_nav_item" href="#">Контакты</a>
+              <a class="footer_nav_item" href="#">Свяжитесь с нами</a>
+            </div>
           </div>
 
           <div class="footer_social_icons">
-            <img src="./public/icons/icon-twitter.png" alt="" />
-            <img src="./public/icons/vkontakt.png" alt="" />
-            <img src="./public/icons/tg.png" alt="" />
-            <img src="./public/icons/viber.png" alt="" />
+            <a href="#">
+              <img src="./public/icons/icon-twitter.png" alt="" />
+            </a>
+            <a href="#">
+              <img src="./public/icons/vkontakt.png" alt="" />
+            </a>
+            <a href="#">
+              <img src="./public/icons/tg.png" alt="" />
+            </a>
+            <a href="#">
+              <img src="./public/icons/viber.png" alt="" />
+            </a>
           </div>
         </div>
 
@@ -470,7 +492,7 @@
         <span></span>
         <span></span>
       </div>
-      <form class="contact_us_form">
+      <form class="contact_us_form" id="form">
         <div class="contact_us_form_top">
           <h3 class="add_point">Свяжись с нами</h3>
           <img src="./public/icons/little_white_icon.png" alt="icon" />
@@ -478,36 +500,45 @@
 
         <div class="contact_us_form_row">
           <input
+            name="name"
             class="contact_us_form_input"
             type="text"
             placeholder="Ваше имя * "
+            required
+            autocomplete="off"
           />
           <img src="./public/icons/free-icon-user-avatar.png" alt="" />
         </div>
 
         <div class="contact_us_form_row">
           <input
+            name="phone"
             class="contact_us_form_input"
             type="text"
             placeholder="Телефон * "
+            required
           />
           <img src="./public/icons/call.png" alt="" />
         </div>
         <div class="contact_us_form_row">
           <input
+            name="email"
             class="contact_us_form_input"
-            type="text"
+            type="email"
             placeholder="E-mail * "
+            required
           />
           <img src="./public/icons/free-icon-email.png" alt="" />
         </div>
         <div class="contact_us_form_row textarea">
           <textarea
+            name="message"
             placeholder="Ваш вопрос *"
             name=""
             id=""
             cols="30"
             rows="10"
+            required
           ></textarea>
           <img src="./public/icons/free-icon-question.png" alt="" />
         </div>
@@ -528,6 +559,42 @@
     <button class="scroll-top-arrow" id="scroll_btn">
       <img src="./public/icons/up.png" alt="Scroll to Top" />
     </button>
+
+    <!-- Menu -->
+    <div class="menu" id="menu">
+      <div class="menu_top">
+        <div class="menu_row_close">
+          <img id="close_menu" src="./public/icons/Close_button.png" alt="" />
+        </div>
+        <div class="menu_row_logo">
+          <img src="./public/icons/menu_logo.png" alt="" />
+        </div>
+        <div class="menu_navbar">
+          <a class="menu_nav_item" href="#services">Услуги</a>
+          <a class="menu_nav_item" href="#group">Наша команда</a>
+          <a class="menu_nav_item" href="#company">О нас</a>
+          <a class="menu_nav_item" href="#contact">Контакты</a>
+          <a class="menu_nav_item" href="#contact_us">Свяжитесь с нами</a>
+        </div>
+      </div>
+
+      <div class="menu_bottom">
+        <div class="footer_social_icons">
+          <a href="#">
+            <img src="./public/icons/icon-twitter.png" alt="" />
+          </a>
+          <a href="#">
+            <img src="./public/icons/vkontakt.png" alt="" />
+          </a>
+          <a href="#">
+            <img src="./public/icons/tg.png" alt="" />
+          </a>
+          <a href="#">
+            <img src="./public/icons/viber.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
 
     <script src="./js/script.js"></script>
   </body>
