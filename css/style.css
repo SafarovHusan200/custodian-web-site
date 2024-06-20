@@ -1525,6 +1525,14 @@ html {
     height: 853px !important;
     border: 1px sli;
   }
+
+  .contact_us {
+    height: 1120px;
+  }
+
+  .contact_us .container {
+    flex-direction: column-reverse;
+  }
 }
 
 @media screen and (max-width: 512px) {
@@ -1551,12 +1559,9 @@ html {
     min-height: 798px;
   }
 
-  .contact {
-  }
   .contact_main {
-    left: 50%;
-    transform: rotateX(-50%);
-    top: 420px;
+    left: 10%;
+    top: 135px;
   }
 
   .contact_main_item {
@@ -1569,6 +1574,44 @@ html {
     display: flex;
     gap: 13px;
   }
+
+  .hero_bottom_left,
+  .hero_bottom_right {
+    width: 50%;
+    min-height: 290px !important;
+    padding: 20px;
+  }
+
+  .contact_us {
+    height: 1050px;
+  }
+  .contact_us_form {
+    width: 98%;
+    height: 600px;
+    border-radius: 30px;
+    padding: 40px 20px;
+    background-color: #333333;
+    position: relative;
+    z-index: 2;
+    margin-top: 5px;
+  }
+
+  .footer_row_1024 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .hero_right_btn .btn {
+    width: 100%;
+  }
+
+  .hero_center_right p {
+    margin-top: 10px;
+  }
 }
 
 @media screen and (max-width: 414px) {
@@ -1576,8 +1619,24 @@ html {
     font-size: 25px !important;
   }
 
+  .dubai {
+    width: 98%;
+  }
   .company {
     min-height: 828px;
+  }
+  .contact_us {
+    height: 950px;
+  }
+  .contact_us_form {
+    width: 98%;
+    height: 600px;
+    border-radius: 30px;
+    padding: 30px 20px;
+    background-color: #333333;
+    position: relative;
+    z-index: 2;
+    margin-top: 5px;
   }
 }
 
