@@ -9,6 +9,7 @@ const openModal = document.querySelectorAll("#open_modal");
   (closeMenu = document.getElementById("close_menu"));
 
 // Open Modal
+console.log(openModal);
 openModal.forEach((btn) => {
   btn.addEventListener("click", () => {
     body.style.overflow = "hidden";
@@ -16,6 +17,7 @@ openModal.forEach((btn) => {
   });
 });
 
+// Send message
 forms.forEach((form) => {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
