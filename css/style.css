@@ -1019,7 +1019,7 @@ html {
   position: fixed;
   top: 0;
   right: -239px;
-  z-index: 55;
+  z-index: 9;
   transition: 0.3s;
 }
 

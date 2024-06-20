@@ -14,6 +14,7 @@ openModal.forEach((btn) => {
   btn.addEventListener("click", () => {
     body.style.overflow = "hidden";
     modalOver.classList.remove("hide");
+    menu.classList.remove("active_menu");
   });
 });
 
